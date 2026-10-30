@@ -2,240 +2,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KITE | Product Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-detail {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
 
-    <title>Product Details | KITE</title>
-    <link rel="stylesheet" href="style.css">
+    .product-detail img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
 
-    <style>
-        .details-section {
-            background: #f6f8fc;
-            padding: 75px 0;
-            min-height: 75vh;
-        }
+    .product-info h1 {
+      color: #102b50;
+      margin-bottom: 15px;
+    }
 
-        .details-card {
-            max-width: 950px;
-            margin: auto;
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            box-shadow: 0 15px 45px rgba(16, 24, 45, 0.08);
-        }
+    .product-info p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
 
-        .details-image {
-            background: #eef2fb;
-            min-height: 380px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 110px;
-        }
+    .back-link {
+      display: inline-block;
+      margin: 25px;
+      color: #102b50;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .details-content {
-            padding: 45px 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .details-content h1 {
-            color: #10182d;
-            font-size: 34px;
-            line-height: 1.2;
-            margin-bottom: 18px;
-        }
-
-        .details-content p {
-            color: #647087;
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 22px;
-        }
-
-        .details-label {
-            color: #315bff;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            width: fit-content;
-            background: #20b968;
-            color: #ffffff;
-            padding: 14px 22px;
-            border-radius: 8px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .whatsapp-button:hover {
-            background: #159653;
-        }
-
-        .back-link {
-            color: #315bff;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        @media (max-width: 700px) {
-            .details-section {
-                padding: 40px 0;
-            }
-
-            .details-card {
-                grid-template-columns: 1fr;
-            }
-
-            .details-image {
-                min-height: 250px;
-                font-size: 85px;
-            }
-
-            .details-content {
-                padding: 30px 24px;
-            }
-
-            .details-content h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    @media (max-width: 700px) {
+      .product-detail {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                KITE<span style="color:#315bff;">.</span>
-            </a>
+  <header class="header">
+    <a href="index.html">
+      <img src="images/logo.png" alt="KITE Logo" style="height:60px;">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-            <nav class="navigation">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="https://wa.me/919847170154" class="nav-button">
-                    WhatsApp Us
-                </a>
-            </nav>
-        </div>
-    </header>
+  <a class="back-link" href="products.html">← Back to Products</a>
 
-    <main class="details-section">
-        <div class="container">
+  <main class="product-detail">
+    <div>
+      <img id="productImage" src="" alt="Product image">
+    </div>
 
-            <div class="details-card">
+    <div class="product-info">
+      <h1 id="productName">Product Name</h1>
+      <p id="productDescription">Product description</p>
+      <a id="whatsappLink" class="btn" href="#" target="_blank">
+        Enquire on WhatsApp
+      </a>
+    </div>
+  </main>
 
-                <div class="details-image" id="productImage">
-                    🛍️
-                </div>
+  <script>
+    const products = {
+      "led-slim-board": {
+        name: "LED Slim Board",
+        image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+        description: "Modern LED slim boards for attractive and professional business advertising. Ideal for shops, showrooms and commercial spaces."
+      },
 
-                <div class="details-content">
+      "lollipop-board": {
+        name: "Lollipop Sign Board",
+        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80",
+        description: "Eye-catching lollipop sign boards designed to improve your business visibility and attract customers."
+      },
 
-                    <div class="details-label">Our Product</div>
+      "newspaper-box": {
+        name: "Newspaper Display Box",
+        image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80",
+        description: "Durable and attractive newspaper display boxes for organised newspaper distribution and display."
+      },
 
-                    <h1 id="productName">Product Details</h1>
+      "tshirt-printing": {
+        name: "T-Shirt Printing",
+        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+        description: "Custom T-shirt printing for businesses, events, promotions, teams and special occasions."
+      },
 
-                    <p id="productDescription">
-                        Contact us to learn more about this product.
-                    </p>
+      "advertising-umbrella": {
+        name: "Advertising Umbrella",
+        image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80",
+        description: "Promotional umbrellas that help display your brand and increase visibility during outdoor activities."
+      },
 
-                    <a
-                        href="https://wa.me/919847170154"
-                        class="whatsapp-button"
-                        id="whatsappLink"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Enquire on WhatsApp
-                    </a>
+      "printing-products": {
+        name: "Printing Products",
+        image: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=900&q=80",
+        description: "Printing solutions for business promotions, marketing materials and everyday business needs."
+      },
 
-                    <a href="products.html" class="back-link">
-                        ← Back to All Products
-                    </a>
+      "display-stands": {
+        name: "Display Stands",
+        image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
+        description: "Practical display stands for presenting products, promotional materials and advertising messages."
+      }
+    };
 
-                </div>
-            </div>
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("product");
+    const product = products[productId];
 
-        </div>
-    </main>
+    if (product) {
+      document.getElementById("productName").textContent = product.name;
+      document.getElementById("productDescription").textContent = product.description;
+      document.getElementById("productImage").src = product.image;
+      document.getElementById("productImage").alt = product.name;
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 KITE. All rights reserved.</p>
-        </div>
-    </footer>
+      const message = encodeURIComponent(
+        "Hello KITE, I would like to enquire about " + product.name + "."
+      );
 
-    <script>
-        const products = {
-            "LED Slim Board": {
-                icon: "💡",
-                description: "Modern illuminated LED slim boards for shops, showrooms and business advertising. Contact us to discuss sizes and custom requirements."
-            },
-
-            "Lollipop Sign Board": {
-                icon: "🪧",
-                description: "Eye-catching lollipop sign boards that help your business attract attention. Ask us about available designs and custom options."
-            },
-
-            "Newspaper Display Box": {
-                icon: "📰",
-                description: "Practical newspaper display boxes for presenting and organising printed materials. Contact us for product details."
-            },
-
-            "T-Shirt Printing": {
-                icon: "👕",
-                description: "Custom T-shirt printing for businesses, teams, events and promotions. Get in touch to discuss your design and requirements."
-            },
-
-            "Advertising Umbrella": {
-                icon: "☂️",
-                description: "Custom advertising umbrellas to promote your business and brand. Contact us to discuss printing and customisation options."
-            },
-
-            "Printing Products": {
-                icon: "🖨️",
-                description: "Printing solutions for business promotion, marketing and everyday needs. Contact us to discuss what you need."
-            },
-
-            "Display Stands": {
-                icon: "🏪",
-                description: "Display stands for shops, exhibitions and promotional events. Ask us about suitable options for your business."
-            }
-        };
-
-        const params = new URLSearchParams(window.location.search);
-        const requestedProduct = params.get("product");
-        const product = products[requestedProduct];
-
-        const nameElement = document.getElementById("productName");
-        const descriptionElement = document.getElementById("productDescription");
-        const imageElement = document.getElementById("productImage");
-        const whatsappElement = document.getElementById("whatsappLink");
-
-        if (product) {
-            nameElement.textContent = requestedProduct;
-            descriptionElement.textContent = product.description;
-            imageElement.textContent = product.icon;
-
-            const message = "Hello KITE! I am interested in " + requestedProduct + ". Please share more details.";
-            whatsappElement.href = "https://wa.me/919847170154?text=" + encodeURIComponent(message);
-
-            document.title = requestedProduct + " | KITE";
-        } else {
-            nameElement.textContent = "Product Not Found";
-            descriptionElement.textContent = "Please return to our products page and select a product.";
-            imageElement.textContent = "🔎";
-        }
-    </script>
+      document.getElementById("whatsappLink").href =
+        "https://wa.me/919847170154?text=" + message;
+    } else {
+      document.querySelector(".product-detail").innerHTML =
+        "<h2>Product not found. Please visit our Products page.</h2>";
+    }
+  </script>
 
 </body>
 </html>

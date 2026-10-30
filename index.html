@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         /* HOMEPAGE PRODUCTS SECTION */
 
         .home-products {
@@ -96,13 +97,129 @@
             margin-top: 35px;
         }
 
+
+        /* KITE CONTACT SECTION */
+
+        .kite-contact {
+            padding: 80px 0;
+            background: #f4f7fc;
+        }
+
+        .kite-contact-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        .kite-contact-heading span {
+            color: #315bff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .kite-contact-heading h2 {
+            color: #10182d;
+            font-size: 36px;
+            margin: 12px 0;
+        }
+
+        .kite-contact-heading p {
+            color: #647087;
+            line-height: 1.7;
+        }
+
+        .kite-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .kite-contact-card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #e0e7f1;
+            transition: 0.3s ease;
+        }
+
+        .kite-contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(16, 24, 45, 0.09);
+        }
+
+        .kite-contact-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .kite-contact-card h3 {
+            color: #10182d;
+            margin-bottom: 10px;
+        }
+
+        .kite-contact-card p {
+            color: #647087;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .kite-contact-card a {
+            color: #315bff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .kite-contact-button {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .kite-contact-button a {
+            display: inline-block;
+            background: #f5d928;
+            color: #10182d;
+            padding: 15px 28px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .kite-contact-button a:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
         @media (max-width: 850px) {
+
             .home-product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .kite-contact {
+                padding: 55px 0;
+            }
+
+            .kite-contact-heading h2 {
+                font-size: 28px;
+            }
+
+            .kite-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
 
         @media (max-width: 500px) {
+
             .home-products {
                 padding: 55px 0;
             }
@@ -118,10 +235,13 @@
             .home-product-image {
                 height: 210px;
             }
+
         }
+
     </style>
 
 </head>
+
 
 <body>
 
@@ -371,15 +491,105 @@
         <!-- PRODUCTS PREVIEW SECTION END -->
 
 
-        <!-- CONTACT SECTION PLACEHOLDER -->
+        <!-- CONTACT SECTION START -->
 
-        <section id="contact" style="padding: 30px 0;">
+        <section class="kite-contact" id="contact">
+
+            <div class="container">
+
+                <div class="kite-contact-heading">
+
+                    <span>GET IN TOUCH</span>
+
+                    <h2>Let's Grow Your Brand Together</h2>
+
+                    <p>
+                        Looking for signage, printing or promotional products?
+                        Contact KITE and let's discuss your requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="kite-contact-grid">
+
+                    <!-- WHATSAPP CONTACT -->
+
+                    <div class="kite-contact-card">
+
+                        <div class="kite-contact-icon">📱</div>
+
+                        <h3>WhatsApp / Phone</h3>
+
+                        <p>9847170154</p>
+
+                        <a href="https://wa.me/919847170154"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Chat with us →
+                        </a>
+
+                    </div>
+
+
+                    <!-- EMAIL CONTACT -->
+
+                    <div class="kite-contact-card">
+
+                        <div class="kite-contact-icon">✉️</div>
+
+                        <h3>Email</h3>
+
+                        <p>indiakyro@gmail.com</p>
+
+                        <a href="mailto:indiakyro@gmail.com">
+                            Send an email →
+                        </a>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="kite-contact-card">
+
+                        <div class="kite-contact-icon">📍</div>
+
+                        <h3>Our Location</h3>
+
+                        <p>Kottayam 686020, Kerala, India</p>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kottayam+686020+Kerala+India"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on Map →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kite-contact-button">
+
+                    <a href="https://wa.me/919847170154"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Contact KITE on WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- CONTACT SECTION END -->
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- FOOTER START -->
 
     <footer class="footer">
 
@@ -391,10 +601,14 @@
 
     </footer>
 
+    <!-- FOOTER END -->
+
 
     <!-- JAVASCRIPT CONNECTION -->
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
+

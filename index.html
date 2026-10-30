@@ -10,159 +10,357 @@
 
     <meta name="description" content="KITE - Premium signage and promotional products in Kottayam, Kerala.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* HOMEPAGE PRODUCTS SECTION */
+
+        .home-products {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .home-products-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .home-products-heading span {
+            color: #315bff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .home-products-heading h2 {
+            color: #10182d;
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .home-products-heading p {
+            color: #647087;
+            font-size: 15px;
+        }
+
+        .home-product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .home-product-card {
+            background: #f6f8fc;
+            border: 1px solid #e0e7f1;
+            border-radius: 14px;
+            padding: 25px 18px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .home-product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(16, 24, 45, 0.10);
+        }
+
+        .home-product-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .home-product-card h3 {
+            color: #10182d;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .home-product-card p {
+            color: #647087;
+            font-size: 13px;
+        }
+
+        .home-products-button {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 850px) {
+            .home-product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .home-products {
+                padding: 55px 0;
+            }
+
+            .home-products-heading h2 {
+                font-size: 29px;
+            }
+
+            .home-product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
-<!-- ================= HEADER START ================= -->
+    <!-- HEADER START -->
 
-<header class="header">
+    <header class="header">
 
-    <div class="container navbar">
+        <div class="container navbar">
 
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="KITE Logo">
-            <span>KITE</span>
-        </a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="KITE Logo">
+                <span>KITE</span>
+            </a>
 
-        
-<nav class="navigation">
-    <a href="index.html">Home</a>
+            <nav class="navigation">
 
-    <a href="products.html">Products</a>
+                <a href="index.html">Home</a>
 
-    <a href="#contact">Contact</a>
+                <a href="products.html">Products</a>
 
-    <a href="https://wa.me/919847170154"
-       class="nav-button"
-       target="_blank"
-       rel="noopener noreferrer">
-        WhatsApp Us
-    </a>
-</nav>
+                <a href="#contact">Contact</a>
 
-
-        <a href="https://wa.me/919847170154" class="nav-button">
-            Get Quote on WhatsApp
-        </a>
-
-    </div>
-
-</header>
-
-<!-- ================= HEADER END ================= -->
-
-
-<!-- ================= HERO SECTION START ================= -->
-
-<main>
-
-<section class="hero">
-
-    <div class="container hero-grid">
-
-        <div class="hero-content">
-
-            <div class="hero-label">
-                <span class="green-dot"></span>
-                SERVING CUSTOMERS ACROSS KERALA
-            </div>
-
-            <h1>
-                Grow Your
-                <span>Brand Visibility</span>
-                With Premium Signage & Promo Products
-            </h1>
-
-            <p>
-                KITE provides premium LED boards,
-                lollipop signs, newspaper boxes,
-                T-shirt printing, advertising umbrellas
-                and complete branding solutions.
-
-                Quality products, attractive designs
-                and reliable service from Kottayam, Kerala.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#products" class="primary-button">
-                    View Products ↗
+                <a href="https://wa.me/919847170154"
+                   class="nav-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
                 </a>
 
-                <a href="https://wa.me/919847170154" class="yellow-button">
-                    WhatsApp Now
-                </a>
-
-            </div>
-
-            <div class="hero-stats">
-
-                <div class="stat">
-                    <h3>Premium</h3>
-                    <p>PRODUCT QUALITY</p>
-                </div>
-
-                <div class="stat">
-                    <h3>Kerala</h3>
-                    <p>DELIVERY</p>
-                </div>
-
-                <div class="stat">
-                    <h3>Custom</h3>
-                    <p>DESIGN OPTIONS</p>
-                </div>
-
-            </div>
+            </nav>
 
         </div>
 
+    </header>
 
-        <div class="hero-visual">
+    <!-- HEADER END -->
 
-            <img
-                src="images/hero.jpg"
-                alt="KITE Premium Signage Products"
-                class="hero-image"
-            >
 
-            <div class="floating-card">
+    <main>
 
-                <div class="floating-icon">✓</div>
+        <!-- HERO SECTION START -->
 
-                <div>
-                    <h4>Premium Branding</h4>
-                    <p>Make your business stand out</p>
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="hero-label">
+                        <span class="green-dot"></span>
+                        SERVING CUSTOMERS ACROSS KERALA
+                    </div>
+
+                    <h1>
+                        Grow Your
+                        <span>Brand Visibility</span>
+                        With Premium Signage & Promo Products
+                    </h1>
+
+                    <p>
+                        KITE provides premium LED boards,
+                        lollipop signs, newspaper boxes,
+                        T-shirt printing, advertising umbrellas
+                        and complete branding solutions.
+
+                        Quality products, attractive designs
+                        and reliable service from Kottayam, Kerala.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#products" class="primary-button">
+                            View Products ↗
+                        </a>
+
+                        <a href="https://wa.me/919847170154"
+                           class="yellow-button"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            WhatsApp Now
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="stat">
+                            <h3>Premium</h3>
+                            <p>PRODUCT QUALITY</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>Kerala</h3>
+                            <p>DELIVERY</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>Custom</h3>
+                            <p>DESIGN OPTIONS</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <img
+                        src="images/hero.jpg"
+                        alt="KITE Premium Signage Products"
+                        class="hero-image"
+                    >
+
+                    <div class="floating-card">
+
+                        <div class="floating-icon">✓</div>
+
+                        <div>
+                            <h4>Premium Branding</h4>
+                            <p>Make your business stand out</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
+        </section>
+
+        <!-- HERO SECTION END -->
+
+
+        <!-- PART 6: PRODUCTS PREVIEW SECTION START -->
+
+        <section class="home-products" id="products">
+
+            <div class="container">
+
+                <div class="home-products-heading">
+
+                    <span>WHAT WE OFFER</span>
+
+                    <h2>Our Popular Products</h2>
+
+                    <p>
+                        Explore our signage, printing and promotional products
+                        designed to help your business stand out.
+                    </p>
+
+                </div>
+
+
+                <div class="home-product-grid">
+
+                    <div class="home-product-card">
+
+                        <div class="home-product-icon">💡</div>
+
+                        <h3>LED Slim Board</h3>
+
+                        <p>
+                            Modern illuminated boards for business advertising.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-product-card">
+
+                        <div class="home-product-icon">🪧</div>
+
+                        <h3>Lollipop Sign Board</h3>
+
+                        <p>
+                            Attractive sign boards to make your business visible.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-product-card">
+
+                        <div class="home-product-icon">📰</div>
+
+                        <h3>Newspaper Display Box</h3>
+
+                        <p>
+                            Practical display solutions for printed materials.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-product-card">
+
+                        <div class="home-product-icon">👕</div>
+
+                        <h3>T-Shirt Printing</h3>
+
+                        <p>
+                            Custom printed T-shirts for brands and events.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-products-button">
+
+                    <a href="products.html" class="primary-button">
+                        View All Products →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUCTS PREVIEW SECTION END -->
+
+
+        <!-- CONTACT SECTION PLACEHOLDER -->
+
+        <section id="contact" style="padding: 30px 0;">
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>© 2026 KITE. All rights reserved.</p>
+
         </div>
 
-    </div>
-
-</section>
-
-</main>
-
-<!-- ================= HERO SECTION END ================= -->
+    </footer>
 
 
-<!-- CSS AND JAVASCRIPT CONNECTIONS -->
+    <!-- JAVASCRIPT CONNECTION -->
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
-
-
-

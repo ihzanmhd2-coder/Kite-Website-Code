@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Our Products | KITE</title>
+    <meta name="description" content="Explore KITE signage, printing and promotional products in Kerala.">
+
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -16,7 +19,7 @@
 
         .products-heading {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .products-heading h1 {
@@ -51,12 +54,39 @@
         }
 
         .product-image {
-            height: 210px;
+            height: 230px;
+            width: 100%;
+            position: relative;
+            background: #e9eef7;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+        }
+
+        .image-placeholder {
+            position: absolute;
+            inset: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #eef2fb;
-            font-size: 65px;
+            color: #647087;
+            gap: 8px;
+            background: linear-gradient(135deg, #eef2fb, #dfe8f7);
+        }
+
+        .image-placeholder span {
+            font-size: 48px;
+        }
+
+        .image-placeholder small {
+            font-size: 12px;
+            font-weight: 600;
         }
 
         .product-info {
@@ -85,6 +115,10 @@
             font-weight: 800;
         }
 
+        .product-link:hover {
+            background: #f2b900;
+        }
+
         .back-home {
             display: inline-block;
             margin-top: 35px;
@@ -104,7 +138,7 @@
             }
 
             .product-image {
-                height: 190px;
+                height: 220px;
             }
         }
     </style>
@@ -112,103 +146,260 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header class="header">
         <div class="container navbar">
-            <a href="index.html" class="logo">KITE<span style="color:#315bff;">.</span></a>
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="KITE Logo">
+                <span>KITE</span>
+            </a>
 
             <nav class="navigation">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
                 <a href="index.html#contact">Contact</a>
-                <a href="https://wa.me/919847170154" class="nav-button">
+
+                <a href="https://wa.me/919847170154"
+                   class="nav-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     WhatsApp Us
                 </a>
             </nav>
+
         </div>
     </header>
 
+
+    <!-- PRODUCTS SECTION -->
+
     <main class="products-page">
+
         <div class="container">
 
             <div class="products-heading">
                 <h1>Our Products</h1>
+
                 <p>
                     Explore our signage, printing and promotional products.
                     Contact us for details and custom orders.
                 </p>
             </div>
 
+
             <div class="product-grid">
 
-                <article class="product-card">
-                    <div class="product-image">💡</div>
-                    <div class="product-info">
-                        <h2>LED Slim Board</h2>
-                        <p>Modern illuminated display boards for your business and advertising needs.</p>
-                        <a class="product-link" href="product-details.html?product=LED%20Slim%20Board">View Details</a>
-                    </div>
-                </article>
+
+                <!-- PRODUCT 1 -->
 
                 <article class="product-card">
-                    <div class="product-image">🪧</div>
+
+                    <div class="product-image">
+                        <img src="images/led-slim-board.jpg"
+                             alt="LED Slim Board"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>💡</span>
+                            <small>LED Slim Board Image</small>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h2>LED Slim Board</h2>
+                        <p>Modern illuminated display boards for business advertising.</p>
+
+                        <a class="product-link"
+                           href="product-details.html?product=LED%20Slim%20Board">
+                            View Details →
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img src="images/lollipop-board.jpg"
+                             alt="Lollipop Sign Board"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>🪧</span>
+                            <small>Lollipop Sign Board Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>Lollipop Sign Board</h2>
                         <p>Eye-catching sign boards designed to make your business stand out.</p>
-                        <a class="product-link" href="product-details.html?product=Lollipop%20Sign%20Board">View Details</a>
+
+                        <a class="product-link"
+                           href="product-details.html?product=Lollipop%20Sign%20Board">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
 
+
+                <!-- PRODUCT 3 -->
+
                 <article class="product-card">
-                    <div class="product-image">📰</div>
+
+                    <div class="product-image">
+                        <img src="images/newspaper-box.png"
+                             alt="Newspaper Display Box"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>📰</span>
+                            <small>Newspaper Box Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>Newspaper Display Box</h2>
                         <p>Practical display boxes for newspapers and printed materials.</p>
-                        <a class="product-link" href="product-details.html?product=Newspaper%20Display%20Box">View Details</a>
+
+                        <a class="product-link"
+                           href="product-details.html?product=Newspaper%20Display%20Box">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
 
+
+                <!-- PRODUCT 4 -->
+
                 <article class="product-card">
-                    <div class="product-image">👕</div>
+
+                    <div class="product-image">
+                        <img src="images/tshirt-printing.jpg"
+                             alt="T-Shirt Printing"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>👕</span>
+                            <small>T-Shirt Printing Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>T-Shirt Printing</h2>
-                        <p>Custom printed T-shirts for brands, teams, events and promotions.</p>
-                        <a class="product-link" href="product-details.html?product=T-Shirt%20Printing">View Details</a>
+                        <p>Custom printed T-shirts for brands, teams and events.</p>
+
+                        <a class="product-link"
+                           href="product-details.html?product=T-Shirt%20Printing">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
 
+
+                <!-- PRODUCT 5 -->
+
                 <article class="product-card">
-                    <div class="product-image">☂️</div>
+
+                    <div class="product-image">
+                        <img src="images/advertising-umbrella.jpg"
+                             alt="Advertising Umbrella"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>☂️</span>
+                            <small>Advertising Umbrella Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>Advertising Umbrella</h2>
                         <p>Promotional umbrellas featuring your brand and custom designs.</p>
-                        <a class="product-link" href="product-details.html?product=Advertising%20Umbrella">View Details</a>
+
+                        <a class="product-link"
+                           href="product-details.html?product=Advertising%20Umbrella">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
 
+
+                <!-- PRODUCT 6 -->
+
                 <article class="product-card">
-                    <div class="product-image">🖨️</div>
+
+                    <div class="product-image">
+                        <img src="images/printing-products.jpg"
+                             alt="Printing Products"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>🖨️</span>
+                            <small>Printing Products Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>Printing Products</h2>
                         <p>Printing solutions for business, marketing and everyday needs.</p>
-                        <a class="product-link" href="product-details.html?product=Printing%20Products">View Details</a>
+
+                        <a class="product-link"
+                           href="product-details.html?product=Printing%20Products">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
 
+
+                <!-- PRODUCT 7 -->
+
                 <article class="product-card">
-                    <div class="product-image">🏪</div>
+
+                    <div class="product-image">
+                        <img src="images/display-stands.jpg"
+                             alt="Display Stands"
+                             onerror="this.style.display='none'">
+
+                        <div class="image-placeholder">
+                            <span>🏪</span>
+                            <small>Display Stands Image</small>
+                        </div>
+                    </div>
+
                     <div class="product-info">
                         <h2>Display Stands</h2>
-                        <p>Useful display stands for shops, exhibitions and promotional events.</p>
-                        <a class="product-link" href="product-details.html?product=Display%20Stands">View Details</a>
+                        <p>Display stands for shops, exhibitions and promotional events.</p>
+
+                        <a class="product-link"
+                           href="product-details.html?product=Display%20Stands">
+                            View Details →
+                        </a>
                     </div>
+
                 </article>
+
 
             </div>
 
-            <a href="index.html" class="back-home">← Back to Home</a>
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
 
         </div>
+
     </main>
+
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="container">
@@ -218,3 +409,4 @@
 
 </body>
 </html>
+

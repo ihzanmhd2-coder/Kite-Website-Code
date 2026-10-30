@@ -59,9 +59,10 @@
             background: #f6f8fc;
             border: 1px solid #e0e7f1;
             border-radius: 14px;
-            padding: 25px 18px;
+            padding: 18px;
             text-align: center;
             transition: 0.3s ease;
+            overflow: hidden;
         }
 
         .home-product-card:hover {
@@ -69,9 +70,13 @@
             box-shadow: 0 12px 30px rgba(16, 24, 45, 0.10);
         }
 
-        .home-product-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
+        .home-product-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            display: block;
         }
 
         .home-product-card h3 {
@@ -83,6 +88,7 @@
         .home-product-card p {
             color: #647087;
             font-size: 13px;
+            line-height: 1.6;
         }
 
         .home-products-button {
@@ -107,6 +113,10 @@
 
             .home-product-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .home-product-image {
+                height: 210px;
             }
         }
     </style>
@@ -246,7 +256,7 @@
         <!-- HERO SECTION END -->
 
 
-        <!-- PART 6: PRODUCTS PREVIEW SECTION START -->
+        <!-- PRODUCTS PREVIEW SECTION START -->
 
         <section class="home-products" id="products">
 
@@ -268,9 +278,15 @@
 
                 <div class="home-product-grid">
 
+                    <!-- PRODUCT 1 -->
+
                     <div class="home-product-card">
 
-                        <div class="home-product-icon">💡</div>
+                        <img
+                            class="home-product-image"
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"
+                            alt="LED Slim Board"
+                        >
 
                         <h3>LED Slim Board</h3>
 
@@ -281,9 +297,15 @@
                     </div>
 
 
+                    <!-- PRODUCT 2 -->
+
                     <div class="home-product-card">
 
-                        <div class="home-product-icon">🪧</div>
+                        <img
+                            class="home-product-image"
+                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=700&q=80"
+                            alt="Lollipop Sign Board"
+                        >
 
                         <h3>Lollipop Sign Board</h3>
 
@@ -294,9 +316,15 @@
                     </div>
 
 
+                    <!-- PRODUCT 3 -->
+
                     <div class="home-product-card">
 
-                        <div class="home-product-icon">📰</div>
+                        <img
+                            class="home-product-image"
+                            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=700&q=80"
+                            alt="Newspaper Display Box"
+                        >
 
                         <h3>Newspaper Display Box</h3>
 
@@ -307,9 +335,15 @@
                     </div>
 
 
+                    <!-- PRODUCT 4 -->
+
                     <div class="home-product-card">
 
-                        <div class="home-product-icon">👕</div>
+                        <img
+                            class="home-product-image"
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+                            alt="T-Shirt Printing"
+                        >
 
                         <h3>T-Shirt Printing</h3>
 

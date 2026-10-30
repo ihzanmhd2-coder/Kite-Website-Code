@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | KITE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .details-section {
+            background: #f6f8fc;
+            padding: 75px 0;
+            min-height: 75vh;
+        }
+
+        .details-card {
+            max-width: 950px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 15px 45px rgba(16, 24, 45, 0.08);
+        }
+
+        .details-image {
+            background: #eef2fb;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 110px;
+        }
+
+        .details-content {
+            padding: 45px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .details-content h1 {
+            color: #10182d;
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .details-content p {
+            color: #647087;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .details-label {
+            color: #315bff;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            width: fit-content;
+            background: #20b968;
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-button:hover {
+            background: #159653;
+        }
+
+        .back-link {
+            color: #315bff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+            .details-section {
+                padding: 40px 0;
+            }
+
+            .details-card {
+                grid-template-columns: 1fr;
+            }
+
+            .details-image {
+                min-height: 250px;
+                font-size: 85px;
+            }
+
+            .details-content {
+                padding: 30px 24px;
+            }
+
+            .details-content h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                KITE<span style="color:#315bff;">.</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="https://wa.me/919847170154" class="nav-button">
+                    WhatsApp Us
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="details-section">
+        <div class="container">
+
+            <div class="details-card">
+
+                <div class="details-image" id="productImage">
+                    🛍️
+                </div>
+
+                <div class="details-content">
+
+                    <div class="details-label">Our Product</div>
+
+                    <h1 id="productName">Product Details</h1>
+
+                    <p id="productDescription">
+                        Contact us to learn more about this product.
+                    </p>
+
+                    <a
+                        href="https://wa.me/919847170154"
+                        class="whatsapp-button"
+                        id="whatsappLink"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Enquire on WhatsApp
+                    </a>
+
+                    <a href="products.html" class="back-link">
+                        ← Back to All Products
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 KITE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const products = {
+            "LED Slim Board": {
+                icon: "💡",
+                description: "Modern illuminated LED slim boards for shops, showrooms and business advertising. Contact us to discuss sizes and custom requirements."
+            },
+
+            "Lollipop Sign Board": {
+                icon: "🪧",
+                description: "Eye-catching lollipop sign boards that help your business attract attention. Ask us about available designs and custom options."
+            },
+
+            "Newspaper Display Box": {
+                icon: "📰",
+                description: "Practical newspaper display boxes for presenting and organising printed materials. Contact us for product details."
+            },
+
+            "T-Shirt Printing": {
+                icon: "👕",
+                description: "Custom T-shirt printing for businesses, teams, events and promotions. Get in touch to discuss your design and requirements."
+            },
+
+            "Advertising Umbrella": {
+                icon: "☂️",
+                description: "Custom advertising umbrellas to promote your business and brand. Contact us to discuss printing and customisation options."
+            },
+
+            "Printing Products": {
+                icon: "🖨️",
+                description: "Printing solutions for business promotion, marketing and everyday needs. Contact us to discuss what you need."
+            },
+
+            "Display Stands": {
+                icon: "🏪",
+                description: "Display stands for shops, exhibitions and promotional events. Ask us about suitable options for your business."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const requestedProduct = params.get("product");
+        const product = products[requestedProduct];
+
+        const nameElement = document.getElementById("productName");
+        const descriptionElement = document.getElementById("productDescription");
+        const imageElement = document.getElementById("productImage");
+        const whatsappElement = document.getElementById("whatsappLink");
+
+        if (product) {
+            nameElement.textContent = requestedProduct;
+            descriptionElement.textContent = product.description;
+            imageElement.textContent = product.icon;
+
+            const message = "Hello KITE! I am interested in " + requestedProduct + ". Please share more details.";
+            whatsappElement.href = "https://wa.me/919847170154?text=" + encodeURIComponent(message);
+
+            document.title = requestedProduct + " | KITE";
+        } else {
+            nameElement.textContent = "Product Not Found";
+            descriptionElement.textContent = "Please return to our products page and select a product.";
+            imageElement.textContent = "🔎";
+        }
+    </script>
+
+</body>
+</html>
